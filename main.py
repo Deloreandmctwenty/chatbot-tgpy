@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup as x
 import telebot
 
 URL = "https://www.playground.ru/news"
-APIK = "5559753240:AAGEeZyojjI7MM1-s4Eq1FdS9gIgB5LfE3Y"
+APIK = # smth
 
 def pars(url):
 
