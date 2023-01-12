@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup as x
 import telebot
 
-URL = "https://www.playground.ru/news"
+URL = "TOPSECRET"
 APIK = # smth
 
 def pars(url):
