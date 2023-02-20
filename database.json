@@ -1,1 +1,31 @@
-{}
+import json
+
+FILE_PATH = "database.json"
+
+
+def read_database() -> dict:
+    with open(FILE_PATH, 'r') as f:
+        return json.load(f)
+
+
+def save_database(db: dict):
+    with open(FILE_PATH, 'w') as f:
+        return json.dump(db, f)
+
+
+def update_user(user_id: int, latitude: float, longitude: float):
+    db = read_database()
+    db[str(user_id)] = {
+        "latitude": latitude,
+        "longitude": longitude
+    }
+
+    save_database(db)
+
+
+def delete_user(user_id):
+    db = read_database()
+    user_id = str(user_id)
+    if user_id in db:
+        db.pop(user_id)
+        save_database(db)
